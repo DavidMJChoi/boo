@@ -95,6 +95,10 @@ func main() {
 			// Try cd l<num> first, if it fails, try cd ../l<num>
 			terminal.sendText(`cd "${dirName}" || cd "../${dirName}"`);
 
+			// Open file in editor
+			const doc = await vscode.workspace.openTextDocument(filePath);
+			await vscode.window.showTextDocument(doc);
+
 
 		} catch (error) {
 			vscode.window.showErrorMessage(`Error creating files: ${error.message}`);

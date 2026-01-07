@@ -21,7 +21,7 @@ Creates directory `l{num}/` with `l{num}.go` template file and switches terminal
 ```bash
 npm install -g vsce
 vsce package
-code --install-extension boo-0.0.1.vsix
+code --install-extension boo-<version>.vsix
 ```
 
 ## License
